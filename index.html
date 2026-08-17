@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Lionime - Beranda</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700;14..32,900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== RESET GLOBAL ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f7f7f7;
+            color: #1d1d1f;
+            line-height: 1.5;
+            padding: 16px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== KONTENER UTAMA ===== */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+        }
+
+        /* ===== HEADER (BACKGROUND GELAP) ===== */
+        .site-header {
+            background: #121212;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-bottom: 3px solid #ff6b1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+        .logo .lion {
+            color: #ff6b1a;
+        }
+        .logo .me {
+            color: #ffffff;
+        }
+        .logo small {
+            font-size: 14px;
+            font-weight: 400;
+            color: #888888;
+            letter-spacing: 0;
+            margin-left: 4px;
+        }
+
+        .date-badge {
+            font-size: 13px;
+            color: #cccccc;
+            background: #1e1e1e;
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: 1px solid #333333;
+            white-space: nowrap;
+        }
+
+        /* ===== JUDUL HALAMAN ===== */
+        .hero {
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            font-size: clamp(22px, 5vw, 34px);
+            font-weight: 900;
+            line-height: 1.2;
+            color: #1d1d1f;
+        }
+        .hero h1 .highlight {
+            color: #ff6b1a;
+        }
+
+        /* ===== BAGIAN FEED (JUDUL SUDAH DIHAPUS) ===== */
+        .feed-section {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #efeff0;
+            margin-bottom: 20px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            margin-top: 10px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5ea;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 13px;
+            color: #8e8e93;
+        }
+        .footer a {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer a:hover {
+            color: #ff6b1a;
+        }
+        .footer .social-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        /* ===== RESPONSIVE HP ===== */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+            .site-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+                padding: 14px 16px;
+            }
+            .logo {
+                font-size: 22px;
+            }
+            .feed-section {
+                padding: 12px;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 30px 20px;
+            }
+            .feed-section {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- ===== HEADER ===== -->
+        <header class="site-header">
+            <div class="logo">
+                <span class="lion">LION</span><span class="me">!ME</span><small>official</small>
+            </div>
+            <div class="date-badge" id="currentDate"></div>
+        </header>
+
+        <!-- ===== HERO ===== -->
+        <div class="hero">
+            <h1>Update <span class="highlight">Anime</span> Terkini</h1>
+        </div>
+
+        <!-- ===== FEED (PAKAI CURATOR.IO) ===== -->
+        <section class="feed-section">
+            <!-- KODE CURATOR.IO YANG KAMU KASIH -->
+            <div id="curator-feed-default-feed-layout">
+                <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+            </div>
+
+            <script type="text/javascript">
+                (function(){
+                    var i,e,d=document,s="script";
+                    i=d.createElement(s);
+                    i.async=1;
+                    i.charset="UTF-8";
+                    i.src="https://cdn.curator.io/published/e46022d3-ce26-40a6-b058-6b13dc971c30.js";
+                    e=d.getElementsByTagName(s)[0];
+                    e.parentNode.insertBefore(i, e);
+                })();
+            </script>
+            <!-- SAMPAI SINI -->
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <span>&copy; 2026 Lionime</span>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@lionime.official" target="_blank">TikTok</a>
+                <a href="https://www.instagram.com/lionime.official" target="_blank">Instagram</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('id-ID', options);
+    </script>
+
+</body>
+</html>
